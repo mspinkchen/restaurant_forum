@@ -2,10 +2,12 @@
   <div class="row">
 
     <ul class="nav nav-pills nav-pills-center">
-      <li class="active"><%= link_to "全部餐廳", root_path%></li>
+      <li><%= link_to "全部餐廳", root_path%></li>
       
       <% @categories.each do |category| %>
-        <li><%= link_to category.name, category_path(category) %></li>
+        <li class="<%="active" if category == @category %>">
+          <%= link_to category.name, category_path(category) %>
+        </li>
       <% end %>
     </ul>
 
