@@ -47,7 +47,7 @@
 
   <div class = "form-group">
     <%= f.label :image, "Photo" %>
-    <%= image_tag @restaurant.image, width:'300px' if @restaurant.image? %>
+    <%= image_tag @restaurant.image, width:'600px' if @restaurant.image? %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
