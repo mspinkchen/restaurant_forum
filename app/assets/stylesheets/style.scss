@@ -8,3 +8,21 @@
   width:310px;
   margin:0 auto;
 }
+
+
+.restaurant-item{
+  border:1px solid #ddd;
+  border-radius:5px ;
+  padding:10px;
+  margin-bottom:20px;
+}
+
+.restaurant-item img{
+  max-height: 180px;
+  width:100%;
+}
+
+.restaurant-item .caption{
+  padding:10px;
+  margin:5px 0;
+}
