@@ -2,6 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+
+          <ul class="nav nav-pills nav-pills-center">
+      <li class="active"><%= link_to "全部餐廳", root_path%></li>
+      
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category) %></li>
+      <% end %>
+    </ul> 
+
       <h1><%=@restaurant.name%></h1>
       <p><%= @restaurant.category.name %></p><br>
     </div>
@@ -21,8 +30,6 @@
       <p><strong>Description: </strong><%= @restaurant.description %></p>
     </div>
     
-    <hr>
-<%= link_to "Back to index", admin_restaurants_path %>
   
   </div>
 </div>
