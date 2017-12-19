@@ -31,6 +31,19 @@
       <br>
     </div>
 
+    <!--顯示餐廳相關評論-->
+    
+    <% @restaurant.comments.each do |comment| %>
+    <div>
+      <h4><%= comment.user.email.split("@").first %></h4>
+      <p><%= simple_format comment.content %></p>
+      <p class="text-muted">
+      <em><%= time_ago_in_words(comment.created_at)%>ago</em>
+    </div>
+
+    <hr>
+    <% end %>
+
 
     <div class = "container">
       <div class="row">
