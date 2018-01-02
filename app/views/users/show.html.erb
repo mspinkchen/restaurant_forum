@@ -18,8 +18,28 @@
       <% end %>
     </div>
 
-    <br>
+    <div class = "clearfix">
+    </div>
 
-   </div>
+    <br>
+    <div class = "panel panel-default">
+      <div class = "panel-heading">
+        <h3 class = "panel-title"><%= @commented_restaurants.count %> 已評論餐廳 </h3>
+      </div>
+    </div>
+      <div class = "panel-body">
+        <% @commented_restaurants.each do |restaurant| %>
+        <%= link_to restaurant_path(restaurant) do%>
+        <div class = "my-restaurants">
+          <div>
+          <img src="https://api.fnkr.net/testimg/100x60/00CED1/FFF/?text=img+placeholder", class: "img-responsive center-block">
+         </div>
+          <!--<div><%= image_tag restaurant.image %></div>-->
+          <h5><%= restaurant.name %></h5>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

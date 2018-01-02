@@ -41,3 +41,17 @@
   width: 50px;
   margin: 10px;
 }
+
+.my-restaurants {
+  display: inline-block;
+  padding: 7px;
+}
+
+.my-restaurants > div {
+  height: 60px;
+}
+
+.my-reataurants img {
+  mix-height: 100%;
+}
+
