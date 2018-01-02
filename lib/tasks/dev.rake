@@ -20,7 +20,9 @@ namespace :dev do
 
     20.times do |i|
       user_name = FFaker::Name.first_name
-      User.create!(email: "#{user_name}@example.com",
+      User.create!(
+      name: user_name,
+      email: "#{user_name}@example.com",
       password: "12345678"
       )
     end    
@@ -31,6 +33,7 @@ namespace :dev do
 
 
   task fake_comment: :environment do
+    Comment.destroy_all
     Restaurant.all.each do |restaurant|
 
       3.times do |i|
@@ -44,19 +47,6 @@ namespace :dev do
     puts "now you have #{Comment.count} comment data" 
   end
 
-    task fake_image: :environment do
-    Restaurant.all.each do |restaurant|
-
-      3.times do |i|
-        restaurant.comments.create!(
-          content: FFaker::Lorem.sentence,
-          user: User.all.sample
-          )
-      end
-    end
-    puts "Have created fake comment"
-    puts "now you have #{Comment.count} comment data" 
-  end
 
 
 end
