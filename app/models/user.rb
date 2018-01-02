@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates_presence_of :name
 
   has_many :comments
+  has_many :restaurants, through: :comments
 
   def admin?
     self.role == "admin"
