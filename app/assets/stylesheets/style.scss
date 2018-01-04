@@ -42,16 +42,21 @@
   margin: 10px;
 }
 
-.my-restaurants {
+.my-restaurant {
   display: inline-block;
   padding: 7px;
 }
 
-.my-restaurants > div {
-  height: 60px;
+.my-restaurant > div {
+  width: 80px;
+  height: 80px;
 }
 
-.my-reataurants img {
+.my-reataurant img {
   mix-height: 100%;
 }
+
+.panel .my-restaurant:hover {
+   background-color: #eee;
+ }
 
