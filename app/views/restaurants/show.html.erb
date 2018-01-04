@@ -33,6 +33,12 @@
       <hr>
     </div>
 
+    <div>
+      <%= link_to "dashboard",dashboard_restaurant_path(@restaurant), class: "btn btn-info"%>
+    </div>
+
+    <br>
+
     <!--顯示餐廳相關評論-->
     
     <% @restaurant.comments.each do |comment| %>

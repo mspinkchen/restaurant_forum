@@ -18,4 +18,8 @@ class RestaurantsController < ApplicationController
     @recent_comments = Restaurant.all.order(created_at: :desc).limit(10)
   end
 
+  def dashboard
+    @restaurant = Restaurant.find(params[:id])
+  end
+
 end
