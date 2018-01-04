@@ -12,4 +12,10 @@ class RestaurantsController < ApplicationController
     @categories = Category.all
     @comment = Comment.new
    end
+
+   def feeds
+    @recent_restaurants = Restaurant.all.order(created_at: :desc).limit(10)
+    @recent_comments = Restaurant.all.order(created_at: :desc).limit(10)
+  end
+
 end
