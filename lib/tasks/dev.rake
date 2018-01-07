@@ -19,6 +19,7 @@ namespace :dev do
   task fake_user: :environment do
 
     20.times do |i|
+      User.destroy_all
       user_name = FFaker::Name.first_name
       User.create!(
       name: user_name,
