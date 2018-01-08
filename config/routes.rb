@@ -18,6 +18,11 @@ Rails.application.routes.draw do
       post :unfavorite
     end
 
+    member do
+      post :like
+      post :unlike
+    end
+
   end
 
   resources :categories, only: :show
