@@ -10,6 +10,7 @@
         <P class="label label-info"><%= restaurant.category.name %></P>
         <p><%= truncate(restaurant.description, length: 70)%></p>
         <%= render partial: "shared/favorite", locals: {restaurant: restaurant} %>
+        <%= render partial: "shared/like", locals: {restaurant: restaurant} %>
       </div>
      </div>
    </div>

@@ -33,14 +33,22 @@
       <hr>
     </div>
 
-    <div>
+    <div class = "my-button-list">
       <%= link_to "dashboard",dashboard_restaurant_path(@restaurant), class: "btn btn-info"%>
     </div>
 
     <!--顯示收藏按鈕--> 
+    <div class = "my-button-list">
     <%= render partial: "shared/favorite", locals: {restaurant: @restaurant} %> 
+   </div>
+
+    <!--顯示喜歡按鈕--> 
+    <div class = "my-button-list">
+    <%= render partial: "shared/like", locals: {restaurant: @restaurant} %>
+    </div>
     <div = "clearfix">
     </div>
+
 
 
     <br>
