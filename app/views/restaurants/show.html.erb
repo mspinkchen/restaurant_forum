@@ -37,15 +37,11 @@
       <%= link_to "dashboard",dashboard_restaurant_path(@restaurant), class: "btn btn-info"%>
     </div>
 
-    <div class = "my-favorite">
-      <%= link_to favorite_restaurant_path(@restaurant), method: :post do %> 
-        <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
-      <% end %>
-
-      <%= link_to unfavorite_restaurant_path(@restaurant), method: :post do %> 
-      <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
-      <% end %>
+    <!--顯示收藏按鈕--> 
+    <%= render partial: "shared/favorite", locals: {restaurant: @restaurant} %> 
+    <div = "clearfix">
     </div>
+
 
     <br>
 
