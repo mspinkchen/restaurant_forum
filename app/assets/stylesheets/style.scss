@@ -61,7 +61,7 @@
   mix-height: 100%;
 }
 
-.panel .my-restaurant:hover {
+.panel .my-restaurant:hover, .user-item:hover {
    background-color: #eee;
  }
 
@@ -69,4 +69,8 @@
   display:inline-block;
   margin:5px;
   
+}
+
+.user-item{
+  margin-bottom: 15px;
 }
