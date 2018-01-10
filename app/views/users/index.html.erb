@@ -1,0 +1,13 @@
+<div class = "container">
+  
+  <ul>
+    <% @users.each do |user| %>
+    <li>
+      <%= user.name %>
+      <%= link_to 'follow', followships_path(following_id: user),method: :post, class: "btn btn-default" %>
+    </li>
+    <% end %>
+    
+  </ul>
+  
+</div>
