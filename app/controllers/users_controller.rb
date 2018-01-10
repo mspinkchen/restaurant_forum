@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @commented_restaurants = @user.restaurants.uniq
-    end
+    @commented_restaurants = @user.commented_restaurants.uniq
+  end
 
   def edit
     if !@user == current_user
