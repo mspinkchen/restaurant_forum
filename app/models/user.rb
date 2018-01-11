@@ -9,10 +9,10 @@ class User < ApplicationRecord
   validates_presence_of :name
 
   has_many :comments, dependent: :restrict_with_error
-  has_many :commented_restaurants, through: :comments
+  has_many :commented_restaurants, through: :comments, source: :restaurant
 
   has_many :favorites, dependent: :destroy
-  has_many :favorited_restaurant, through: :favorites, source: :restaurant
+  has_many :favorited_restaurants, through: :favorites, source: :restaurant
 
   has_many :likes, dependent: :destroy
   has_many :liked_restaurants, through: :likes, source: :restaurant
