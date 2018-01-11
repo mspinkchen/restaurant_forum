@@ -21,10 +21,17 @@
           <img src="http://via.placeholder.com/150x150"></a>
           <h4><%= user.name %></h4>
           <% end %>
-
+        <!--follow -->
          <%= render partial: "shared/follow", locals: {user: user} %>
+        <!--friend -->
+         <%= render partial: "shared/friend", locals: {user: user} %>
+  
+
+
          </div>
         <% end %>   
+
+
 
 
   </div>
