@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates_presence_of :name
 
   has_many :comments, dependent: :restrict_with_error
-  has_many :commented_restaurants, through: :comments, source: :restaurant
+  has_many :commented_restaurants, through: :comments
 
   has_many :favorites, dependent: :destroy
   has_many :favorited_restaurant, through: :favorites, source: :restaurant
@@ -19,6 +19,9 @@ class User < ApplicationRecord
 
   has_many :followships, dependent: :destroy
   has_many :followings, through: :followships
+
+  has_many :inverse_followship, class_name: "Followship", foreign_key: "following_id"
+  has_many :followers, through: :inverse_followship, source: :user
 
   def admin?
     self.role == "admin"
