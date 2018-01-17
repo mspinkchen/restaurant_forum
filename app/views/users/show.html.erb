@@ -17,6 +17,7 @@
         <li><%= @favorited_restaurants.count %>已收藏餐廳</li>
         <li><%= @followings.count %>followings</li>
         <li><%= @followers.count %>followers</li>
+        <li><%= link_to '我的好友',friend_list_user_path %></li>
       </ul>
       <p><%= simple_format @user.intro %></p>
       <% if @user.email == current_user.email %>
@@ -42,7 +43,6 @@
           <%= link_to user_path(following) do%>
           <div class = "my-followings">
           <div><img src="http://via.placeholder.com/30x30"></div>
-          <!--<div><%= image_tag following.avatar %></div>-->
           <%= following.name %>
           </div>
           <% end %>
@@ -61,7 +61,6 @@
           <li class = "list-group-item">
           <%= link_to user_path(follower) do%>
           <img src="http://via.placeholder.com/30x30">
-          <!--<div><%= image_tag following.avatar %></div>-->
           <%= follower.name %>
           <% end %>
           </li>
@@ -84,7 +83,6 @@
           <%= link_to restaurant_path(restaurant) do%>
           <div class = "my-restaurant">
           <img src="https://api.fnkr.net/testimg/80x80/00CED1/FFF/?text=img+placeholder">
-          <!--<div><%= image_tag restaurant.image %></div>-->
           <h5><%= restaurant.name %></h5>
           </div>
           <% end %>
@@ -103,7 +101,6 @@
           <%= link_to restaurant_path(restaurant) do%>
           <div class = "my-restaurant">
           <img src="https://api.fnkr.net/testimg/80x80/00CED1/FFF/?text=img+placeholder">
-          <!--<div><%= image_tag restaurant.image %></div>-->
           <h5><%= restaurant.name %></h5>
           </div>
           <% end %>
