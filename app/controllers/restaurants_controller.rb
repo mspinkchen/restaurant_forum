@@ -23,7 +23,6 @@ class RestaurantsController < ApplicationController
 
   def favorite
      @restaurant.favorites.create(user: current_user)
-     @restaurant.count_favorites
      redirect_back(fallback_location: root_path)
    end
  
@@ -31,7 +30,6 @@ class RestaurantsController < ApplicationController
   def unfavorite 
      favorites = Favorite.where(restaurant: @restaurant, user: current_user)
      favorites.destroy_all
-     @restaurant.count_favorites
      redirect_back(fallback_location: root_path)
   end
 
