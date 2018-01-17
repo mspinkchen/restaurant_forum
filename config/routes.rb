@@ -7,18 +7,13 @@ Rails.application.routes.draw do
 
     collection do 
       get :feeds
+      get :ranking
     end
 
     member do
       get :dashboard
-    end
-
-    member do
       post :favorite
       post :unfavorite
-    end
-
-    member do
       post :like
       post :unlike
     end
